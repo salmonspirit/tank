@@ -11,6 +11,8 @@ public class TankFrame extends Frame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	int x = 200, y = 200;
 
 	public TankFrame() {
 		setSize(800, 600);
@@ -29,7 +31,8 @@ public class TankFrame extends Frame {
 	
 	@Override
 	public void paint(Graphics g) {
-		System.out.print("paint");
-		g.fillRect(200, 200, 50, 50);
+		g.fillRect(x, y, 50, 50);
+		x += 10;
+		y += 10;
 	}
 }
